@@ -25,3 +25,13 @@ INSERT INTO line_chart(category, series) VALUES('Dec', 54.4);
 
 SELECT * FROM line_chart;
 --End Line chart
+
+--Multiple line chart
+CREATE TABLE multiple_line_chart
+(
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL,
+    subscribers VARCHAR(10),
+    year VARCHAR(4) NOT NULL
+);
+--End Multiple line chart
