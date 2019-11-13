@@ -17,8 +17,10 @@ import com.google.gson.JsonObject;
 
 import in.bushansirgur.highcharts.dao.DataDAO;
 import in.bushansirgur.highcharts.dao.MultipleDataDAO;
+import in.bushansirgur.highcharts.dao.PiechartDAO;
 import in.bushansirgur.highcharts.model.Data;
 import in.bushansirgur.highcharts.model.MultipleData;
+import in.bushansirgur.highcharts.model.PiechartData;
 
 @Controller
 public class HomeController {
@@ -28,6 +30,9 @@ public class HomeController {
 	
 	@Autowired
 	MultipleDataDAO multipleDataDAO;
+	
+	@Autowired
+	PiechartDAO piechartDAO;
 	
 	@RequestMapping("/")
 	public String showHome(){
@@ -67,4 +72,22 @@ public class HomeController {
 		}
 		return new ResponseEntity<>(mappedData, HttpStatus.OK);
 	}
+	
+	@RequestMapping("/piechart")
+	public ResponseEntity<?> getDataForPiechart(){
+		List<PiechartData> piechartData = piechartDAO.findAll();
+		return new ResponseEntity<>(piechartData, HttpStatus.OK);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

@@ -35,3 +35,12 @@ CREATE TABLE multiple_line_chart
     year VARCHAR(4) NOT NULL
 );
 --End Multiple line chart
+
+--Pie chart
+CREATE TABLE pie_chart(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL,
+    yaxis INT NOT NULL
+)
+--End Pie chart
+
