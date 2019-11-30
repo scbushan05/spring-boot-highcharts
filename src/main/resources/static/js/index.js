@@ -1,10 +1,10 @@
 $.ajax({
 	/* for pie chart */
-	url: "piechart",
+	url: "piechartdata",
 	/* for line chart */
 //	url: "linechartdata",
 	/* for multiple line chart */
-//	url: "multiplelinechart",
+//	url: "multiplelinechartdata",
 	success: function(result){
 		/* line chart single starts here */
 //		var category = JSON.parse(result).categories;

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Welcome to Highcharts</h1>
-	<p>Line chart Demo</p>
+	
 	<div id="container" style="height: 400px"></div>
 	
 	<script src="js/highcharts.js"></script>

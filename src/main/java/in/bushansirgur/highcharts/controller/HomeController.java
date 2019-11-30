@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import org.springframework.web.servlet.ModelAndView;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
@@ -55,7 +55,7 @@ public class HomeController {
 		return jsonObject.toString();
 	}
 	
-	@RequestMapping("/multiplelinechart")
+	@RequestMapping("/multiplelinechartdata")
 	public ResponseEntity<?> getDataForMultipleLine() {
 		List<MultipleData> dataList = multipleDataDAO.findAll();
 		Map<String, List<MultipleData>> mappedData = new HashMap<>();
@@ -73,7 +73,7 @@ public class HomeController {
 		return new ResponseEntity<>(mappedData, HttpStatus.OK);
 	}
 	
-	@RequestMapping("/piechart")
+	@RequestMapping("/piechartdata")
 	public ResponseEntity<?> getDataForPiechart(){
 		List<PiechartData> piechartData = piechartDAO.findAll();
 		return new ResponseEntity<>(piechartData, HttpStatus.OK);
